@@ -71,6 +71,9 @@
 # Use `Model.destroy_all` code.
 # TODO!
 Movie.destroy_all
+Studio.destroy_all
+Actor.destroy_all
+Role.destroy_all
 Rails.logger.info
 
 # Generate models and tables, according to the domain model.
@@ -102,7 +105,25 @@ Rails.logger.info
 
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
-# TODO!
+
+new_studio = Studio.new
+new_studio["name"] = "Warner Bros."
+new_studio.save
+
+all_studios = Studio.all
+puts all_studios.inspect
+
+warner_bros = Studio.find_by({ "name" => "Warner Bros." })
+
+movie = Movie.new
+movie["title"] = "Batman Begins"
+movie["year_released"] = "2005"
+movie["rating"] = "PG-13"
+movie["studio_id"] = warner_bros["id"]
+movie.save
+
+all_movies = Movie.all
+puts all_movies.inspect
 
 # Prints a header for the movies output
 puts "Movies"
