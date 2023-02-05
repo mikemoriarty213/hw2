@@ -308,12 +308,15 @@ puts ""
 
 # loop through movies
 movies = Movie.all
+
 for movie in movies
     title = movie["title"]
     year_released = movie["year_released"]
     rating = movie["rating"]
+    studio_id = Studio.find_by({"id" => movie["studio_id"]})
+    studio_name = studio_id["name"]
 
-    puts "#{title} #{year_released} #{rating}"
+    puts "#{title} #{year_released} #{rating} #{studio_name}"
   end
 
 # Prints a header for the cast output
