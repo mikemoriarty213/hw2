@@ -211,6 +211,30 @@ role["actor_id"] = christian_bale["id"]
 role["character_name"] = "Bruce Wayne"
 role.save
 
+role = Role.new
+role["movie_id"] = batman_begins["id"]
+role["actor_id"] = michael_caine["id"]
+role["character_name"] = "Alfred"
+role.save
+
+role = Role.new
+role["movie_id"] = batman_begins["id"]
+role["actor_id"] = liam_neeson["id"]
+role["character_name"] = "Ra's Al Ghul"
+role.save
+
+role = Role.new
+role["movie_id"] = batman_begins["id"]
+role["actor_id"] = katie_holmes["id"]
+role["character_name"] = "Rachel Dawes"
+role.save
+
+role = Role.new
+role["movie_id"] = batman_begins["id"]
+role["actor_id"] = gary_oldman["id"]
+role["character_name"] = "Commissioner Gordon"
+role.save
+
 # Check Roles table
 all_roles = Role.all
 puts all_roles.inspect
