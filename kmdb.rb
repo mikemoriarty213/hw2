@@ -122,6 +122,20 @@ movie["rating"] = "PG-13"
 movie["studio_id"] = warner_bros["id"]
 movie.save
 
+movie = Movie.new
+movie["title"] = "The Dark Knight"
+movie["year_released"] = "2008"
+movie["rating"] = "PG-13"
+movie["studio_id"] = warner_bros["id"]
+movie.save
+
+movie = Movie.new
+movie["title"] = "The Dark Knight Rises"
+movie["year_released"] = "2012"
+movie["rating"] = "PG-13"
+movie["studio_id"] = warner_bros["id"]
+movie.save
+
 all_movies = Movie.all
 puts all_movies.inspect
 
