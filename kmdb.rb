@@ -110,8 +110,57 @@ new_studio = Studio.new
 new_studio["name"] = "Warner Bros."
 new_studio.save
 
-all_studios = Studio.all
-puts all_studios.inspect
+# Check Studios table
+# all_studios = Studio.all
+# puts all_studios.inspect
+
+new_actor = Actor.new
+new_actor["name"] = "Christian Bale"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["name"] = "Michael Caine"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["name"] = "Aaron Eckhart"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["name"] = "Joseph Gordon-Levitt"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["name"] = "Maggie Gyllenhaal"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["name"] = "Tom Hardy"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["name"] = "Anne Hathaway"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["name"] = "Katie Holmes"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["name"] = "Heath Ledger"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["name"] = "Liam Neeson"
+new_actor.save
+
+new_actor = Actor.new
+new_actor["name"] = "Gary Oldman"
+new_actor.save
+
+# Check Actors table
+# all_actors = Actor.all
+# puts all_actors.inspect
 
 warner_bros = Studio.find_by({ "name" => "Warner Bros." })
 
@@ -136,8 +185,11 @@ movie["rating"] = "PG-13"
 movie["studio_id"] = warner_bros["id"]
 movie.save
 
-all_movies = Movie.all
-puts all_movies.inspect
+# Check Movies table
+# all_movies = Movie.all
+# puts all_movies.inspect
+
+
 
 # Prints a header for the movies output
 puts "Movies"
