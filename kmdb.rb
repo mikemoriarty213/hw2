@@ -70,9 +70,35 @@
 # Delete existing data, so you'll start fresh each time this script is run.
 # Use `Model.destroy_all` code.
 # TODO!
+Movie.destroy_all
+Rails.logger.info
 
 # Generate models and tables, according to the domain model.
-# TODO!
+
+# Step 1. Run the below in terminal:
+# rails generate model Movie
+# rails generate model Studio
+# rails generate model Actor
+# rails generate model Role
+
+# Step 2. In each model's db/migrate file, add the below columns:
+# Movies
+# t.string "title"
+# t.string "year_released"
+# t.string "rating"
+# t.integer "studio_id"
+
+# Studios
+# t.string "name"
+
+# Actors
+# t.string "name"
+
+# Roles
+# t.integer "movie_id"
+# t.integer "actor_id"
+# t.string "character_name"
+
 
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
