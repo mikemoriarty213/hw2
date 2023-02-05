@@ -189,7 +189,31 @@ movie.save
 # all_movies = Movie.all
 # puts all_movies.inspect
 
+batman_begins = Movie.find_by({ "title" => "Batman Begins" })
+the_dark_knight = Movie.find_by({ "title" => "The Dark Knight" })
+the_dark_knight_rises = Movie.find_by({ "title" => "The Dark Knight Rises" })
 
+christian_bale = Actor.find_by({ "name" => "Christian Bale" })
+michael_caine = Actor.find_by({ "name" => "Michael Caine" })
+aaron_eckhart = Actor.find_by({ "name" => "Aaron Eckhart" })
+joseph_gordonlevitt = Actor.find_by({ "name" => "Joseph Gordon-Levitt" })
+maggie_gyllenhaal = Actor.find_by({ "name" => "Maggie Gyllenhaal" })
+tom_hardy = Actor.find_by({ "name" => "Tom Hardy" })
+anne_hathaway = Actor.find_by({ "name" => "Anne Hathaway" })
+katie_holmes = Actor.find_by({ "name" => "Katie Holmes" })
+heath_ledger = Actor.find_by({ "name" => "Heath Ledger" })
+liam_neeson = Actor.find_by({ "name" => "Liam Neeson" })
+gary_oldman = Actor.find_by({ "name" => "Gary Oldman" })
+
+role = Role.new
+role["movie_id"] = batman_begins["id"]
+role["actor_id"] = christian_bale["id"]
+role["character_name"] = "Bruce Wayne"
+role.save
+
+# Check Roles table
+all_roles = Role.all
+puts all_roles.inspect
 
 # Prints a header for the movies output
 puts "Movies"
